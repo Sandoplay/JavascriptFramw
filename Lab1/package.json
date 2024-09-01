@@ -1,0 +1,22 @@
+{
+  "name": "lab1",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "GPL-3.0",
+  "devDependencies": {
+    "typescript": "^5.5.4"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Sandoplay/JavascriptFramw.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Sandoplay/JavascriptFramw/issues"
+  },
+  "homepage": "https://github.com/Sandoplay/JavascriptFramw#readme",
+  "description": ""
+}

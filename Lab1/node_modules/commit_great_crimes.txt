@@ -1,0 +1,4 @@
+
+tsc variables.ts
+
+node variables.js
