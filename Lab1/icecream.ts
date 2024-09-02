@@ -1,4 +1,3 @@
-// Функція для отримання числа від користувача з перевіркою на валідність
 function getNumberInput(promptText: string): number {
     let input: string | null;
     let numberInput: number;
@@ -11,9 +10,8 @@ function getNumberInput(promptText: string): number {
     return numberInput;
 }
 
-// Функція для розрахунку вартості морозива
+
 function calculateIceCreamCost(): number {
-    // Запитуємо у користувача вибір розміру стаканчика
     const size = prompt("Виберіть розмір стаканчика (маленький/великий):");
     
     let cost = 0;
@@ -27,7 +25,6 @@ function calculateIceCreamCost(): number {
         return 0;
     }
 
-    // Запитуємо у користувача вибір начинок
     const toppings: string | null = prompt("Виберіть начинку (шоколад, карамель, ягоди). Введіть через кому, якщо кілька:");
 
     if (toppings) {
@@ -50,7 +47,6 @@ function calculateIceCreamCost(): number {
         }
     }
 
-    // Запитуємо у користувача, чи хоче він маршмелоу
     const addMarshmallow = prompt("Чи хочете ви додати маршмелоу? (так/ні):");
 
     if (addMarshmallow === "так") {
@@ -60,7 +56,6 @@ function calculateIceCreamCost(): number {
     return cost;
 }
 
-// Основна функція для запуску розрахунку
 function main() {
     const totalCost = calculateIceCreamCost();
     alert(`Загальна вартість морозива: ${totalCost} грн`);
