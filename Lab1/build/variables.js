@@ -9,7 +9,7 @@ console.log("Number:", myNumber);
 console.log("Boolean:", myBoolean);
 console.log("Any:", myAny);
 // Array of strings
-let stringArray = ["Hello", "World"];
+let stringArray = ["Hello", "World", 9];
 // Array of numbers
 let numberArray = [1, 2, 3, 4, 5];
 console.log("String Array:", stringArray);

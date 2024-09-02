@@ -10,7 +10,7 @@ console.log("Boolean:", myBoolean);
 console.log("Any:", myAny);
 
 // Array of strings
-let stringArray: string[] = ["Hello", "World"];
+let stringArray: (string|number)[] = ["Hello", "World", 9];
 // Array of numbers
 let numberArray: number[] = [1, 2, 3, 4, 5];
 

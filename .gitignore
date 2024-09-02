@@ -1,4 +1,3 @@
-.gitignore
 .node_modules
 .vscode
 ./Lab1/node_modules

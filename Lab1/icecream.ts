@@ -1,16 +1,3 @@
-function getNumberInput(promptText: string): number {
-    let input: string | null;
-    let numberInput: number;
-
-    do {
-        input = prompt(promptText);
-        numberInput = input ? parseFloat(input) : NaN;
-    } while (isNaN(numberInput) || numberInput < 0);
-
-    return numberInput;
-}
-
-
 function calculateIceCreamCost(): number {
     const size = prompt("Виберіть розмір стаканчика (маленький/великий):");
     
