@@ -3,3 +3,5 @@
 Lab1/node_modules
 Lab2/node_modules
 Lab2/build/
+dist
+node_modules
