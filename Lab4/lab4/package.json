@@ -12,6 +12,9 @@
     "hooks": {
       "pre-commit": "npm run lint && npm prettier"
     }
+
+
+    
   },
   "dependencies": {
     "react": "^18",
