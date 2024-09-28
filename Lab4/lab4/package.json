@@ -8,6 +8,11 @@
     "start": "next start",
     "lint": "next lint"
   },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint && npm prettier"
+    }
+  },
   "dependencies": {
     "react": "^18",
     "react-dom": "^18",
