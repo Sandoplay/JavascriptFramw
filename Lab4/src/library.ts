@@ -34,7 +34,7 @@ export class Library<TItem extends Identifiable<TId> & Representable, TId>
   getAll(): Array<TItem> {
     return this.items;
   }
-  
+
   getCount(): number {
     return this.items.length;
   }

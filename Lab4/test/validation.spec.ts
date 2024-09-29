@@ -70,7 +70,10 @@ describe('New user input validating', () => {
   context('invalid email', () => {
     it('false', () => {
       const validation = Validation.getInstance();
-      const validationResult = validation.validateCreateUserRequest('', 'qwerty');
+      const validationResult = validation.validateCreateUserRequest(
+        '',
+        'qwerty'
+      );
       assert.equal(validationResult, false);
     });
   });

@@ -1,7 +1,7 @@
 import { describe } from 'mocha';
 import { Library } from '../src/library';
-import {Book} from '../src/book';
-import {IBook} from '../src/IBook';
+import { Book } from '../src/book';
+import { IBook } from '../src/IBook';
 import * as assert from 'assert';
 
 describe('adding new book tests', () => {
