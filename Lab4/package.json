@@ -10,11 +10,11 @@
     "deploy": "gh-pages -d dist",
     "prettier": "prettier --write .",
     "lint": "eslint . --ext .ts",
-    "prepare": "husky && husky install"
+    "prepare": "husky"
   },
-
-
   
+
+   
   "prettier": {
     "semi": true,
     "singleQuote": true,
