@@ -12,9 +12,6 @@
     "lint": "eslint . --ext .ts",
     "prepare": "husky"
   },
-  
-
-   
   "prettier": {
     "semi": true,
     "singleQuote": true,
