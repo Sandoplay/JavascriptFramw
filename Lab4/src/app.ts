@@ -67,7 +67,7 @@ class App {
 
       try {
         handleUserCreation();
-        userCreationForm.reset();
+        //userCreationForm.reset();
         this.usersPagination.goToPage(1);
       } catch (err) {
         console.log(err);
