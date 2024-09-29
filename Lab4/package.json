@@ -12,6 +12,9 @@
     "lint": "eslint . --ext .ts",
     "prepare": "husky && husky install"
   },
+
+
+  
   "prettier": {
     "semi": true,
     "singleQuote": true,
