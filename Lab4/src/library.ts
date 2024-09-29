@@ -34,6 +34,10 @@ export class Library<TItem extends Identifiable<TId> & Representable, TId>
   getAll(): Array<TItem> {
     return this.items;
   }
+  
+  getCount(): number {
+    return this.items.length;
+  }
 
   getPaginated(pageNumber: number, pageSize: number): Representable[] {
     const start = (pageNumber - 1) * pageSize;
