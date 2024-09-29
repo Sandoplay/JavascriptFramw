@@ -127,17 +127,15 @@ export class LibraryService implements Paginatable<Representable> {
   }
 
   private loadFromStorage() {
-    const books = this.storageService.get(this.booksKey) ?? [];
+    const storedBooks = this.storageService.get(this.booksKey);
+    const books = Array.isArray(storedBooks) ? storedBooks : [];
+
     for (const book of books) {
       const newBook = new Book();
-      newBook.id = book.id;
-      newBook.author = book.author;
-      newBook.bookName = book.bookName;
-      newBook.releaseYear = book.releaseYear;
-      newBook.borrowed = book.borrowed;
-      newBook.borrowedBy = book.borrowedBy;
+      Object.assign(newBook, book);
       this.library.add(newBook);
     }
+
     console.log(this.library.getAll());
   }
 }
