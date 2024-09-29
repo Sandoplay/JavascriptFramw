@@ -75,7 +75,7 @@ export class LibraryService implements Paginatable<Representable> {
       throw new Error('User already has 3 books');
     }
 
-    let book = this.library.find(bookId);
+    const book = this.library.find(bookId);
     console.log('book found');
     if (!book || book.borrowed) {
       throw new Error('Book not found or it was already taken by someone');
@@ -93,7 +93,7 @@ export class LibraryService implements Paginatable<Representable> {
       throw new Error('User not found');
     }
 
-    let book = this.library.find(bookId);
+    const book = this.library.find(bookId);
     if (!book) {
       throw new Error('Book not found or it was already taken by someone');
     }
@@ -127,17 +127,15 @@ export class LibraryService implements Paginatable<Representable> {
   }
 
   private loadFromStorage() {
-    const books = this.storageService.get(this.booksKey) ?? [];
-    for (let book of books) {
+    const storedBooks = this.storageService.get(this.booksKey);
+    const books = Array.isArray(storedBooks) ? storedBooks : [];
+
+    for (const book of books) {
       const newBook = new Book();
-      newBook.id = book.id;
-      newBook.author = book.author;
-      newBook.bookName = book.bookName;
-      newBook.releaseYear = book.releaseYear;
-      newBook.borrowed = book.borrowed;
-      newBook.borrowedBy = book.borrowedBy;
+      Object.assign(newBook, book);
       this.library.add(newBook);
     }
+
     console.log(this.library.getAll());
   }
 }

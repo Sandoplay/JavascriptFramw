@@ -53,16 +53,15 @@ export class UserService implements Paginatable<IUser> {
   }
 
   private loadFromStorage() {
-    const users = this.storage.get(this.usersKey);
-
-    for (let user of users) {
+    const users = this.storage.get<IUser[]>(this.usersKey);
+    for (const user of users) {
       const newUser = new User();
       newUser.email = user.email;
       newUser.id = user.id;
       newUser.username = user.username;
       const newBooks: IBook[] = [];
-      const books = user.borrowedBooks;
-      for (let book of books) {
+      const books = user.borrowedBooks || [];
+      for (const book of books) {
         const newBook = new Book();
         newBook.id = book.id;
         newBook.author = book.author;

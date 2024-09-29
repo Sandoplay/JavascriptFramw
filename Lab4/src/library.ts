@@ -1,6 +1,5 @@
 import { Identifiable } from './identifiable';
 
-import { IBook } from './IBook';
 import { Paginatable } from './paginatable';
 import { Representable } from './representable';
 

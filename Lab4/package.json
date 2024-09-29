@@ -8,13 +8,9 @@
     "build": "webpack --mode production",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist",
-    "prettier": "prettier --write \"src/**/*.ts\"",
-    "lint": "eslint ."
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "npm run lint && npm prettier"
-    }
+    "prettier": "prettier --write .",
+    "lint": "eslint . --ext .ts",
+    "prepare": "husky"
   },
   "prettier": {
     "semi": true,
@@ -57,7 +53,7 @@
     "eslint-plugin-prettier": "^5.2.1",
     "gh-pages": "^6.1.1",
     "globals": "^15.9.0",
-    "husky": "^9.1.6",
+    "husky": "^8.0.0",
     "prettier": "^3.3.3",
     "sass": "^1.78.0",
     "sass-loader": "^16.0.1",

@@ -1,5 +1,3 @@
-import { Book } from './book';
-import { User } from './user';
 import { UserService } from './user-service';
 import { LibraryService } from './libraryService';
 import { Pagination } from './pagination';
