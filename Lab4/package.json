@@ -12,16 +12,15 @@
     "lint": "eslint . --ext .ts",
     "prepare": "husky"
   },
-
-
-
-
-
-  
   "husky": {
     "hooks": {
       "pre-commit": "npm run lint && npm prettier"
     }
+
+
+
+
+    
   },
   "prettier": {
     "semi": true,
