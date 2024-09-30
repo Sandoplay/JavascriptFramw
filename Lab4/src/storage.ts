@@ -2,7 +2,7 @@ export class Storage {
   private static instance: Storage;
   private constructor() {}
 
-  save<T>(key: string, data: T): void {
+  save<T>(key: string, data: T): any {
     localStorage.setItem(key, JSON.stringify(data));
   }
 
